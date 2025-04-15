@@ -54,3 +54,9 @@ pids
 
 # Diagnostic reports (https://nodejs.org/api/report.html)
 report.[0-9]*.[0-9]*.[0-9]*.[0-9]*.json
+# Ignorar archivos de PostgreSQL si hay una carpeta de datos
+/data/
+/data/*
+# Prisma
+prisma/dev.db
+.env
