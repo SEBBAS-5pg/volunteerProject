@@ -1,0 +1,18 @@
+version: '3.8' 
+
+services:
+  db:
+    image: postgres:16-alpine 
+    restart: always
+    environment:
+      POSTGRES_DB: portafolioB      # Nombre de tu base de datos
+      POSTGRES_USER: sebbas         # Usuario de la base de datos
+      POSTGRES_PASSWORD: contraseña # Contraseña
+    ports:
+      - "5432:5432" 
+    volumes:
+       - db_data:/var/lib/postgresql/data 
+    container_name: postgres_container 
+
+volumes: 
+  db_data:
